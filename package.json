@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "installFrontend": "cd frontend && npm i --omit=dev && cd ..",
-    "installBackend": "cd backend && npm i --omit=dev",
+    "installFrontend": "cd frontend && npm ci --omit=dev && cd ..",
+    "installBackend": "cd backend && npm ci --omit=dev",
     "install": "npm run installFrontend && npm run installBackend",
     "build": "cd frontend && npm run build",
     "start": "node backend/server.js",

@@ -3,7 +3,9 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import path from "path";
 
-dotenv.config();
+if (process.env.SERVER != "dev") {
+  dotenv.config();
+}
 
 const PORT = process.env.PORT || 4001;
 
@@ -14,6 +16,8 @@ const app = express();
 app.use(express.json());
 
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
+
+app.use(express.static(path.join(path.resolve(), "frontend/dist")));
 
 if (process.env.SERVER != "dev") {
   app.get("*", (req, res) =>
