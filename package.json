@@ -1,0 +1,24 @@
+{
+  "name": "holeinthewall",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "installFrontend": "cd frontend && npm i --omit=dev && cd ..",
+    "installBackend": "cd backend && npm i --omit=dev",
+    "install": "npm run installFrontend && npm run installBackend",
+    "build": "cd frontend && npm run build",
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js"
+  },
+  "author": "Jerald Wilks",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeraldwilks/holeinthewall-MERN.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jeraldwilks/holeinthewall-MERN/issues"
+  },
+  "homepage": "https://github.com/jeraldwilks/holeinthewall-MERN#readme",
+  "description": ""
+}
