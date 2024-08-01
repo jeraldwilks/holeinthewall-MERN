@@ -8,8 +8,9 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
 const firebaseConfig = {
-  apiKey: "AIzaSyA2iV15i-Wf77RkPZIKFx8PA5BDYrN0eXI",
+  apiKey: import.meta.env.VITE_FIREBASE_KEY,
   authDomain: "hole-in-the-wall-food.firebaseapp.com",
   projectId: "hole-in-the-wall-food",
   storageBucket: "hole-in-the-wall-food.appspot.com",
